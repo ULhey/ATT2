@@ -424,7 +424,7 @@ ON MatriculaAlunoDisciplina INSTEAD OF DELETE
 AS
 BEGIN
 	ROLLBACK TRANSACTION
-    RAISERROR('N„o È permitido excluir a matrÌcula de um aluno em uma disciplina.', 16, 1);
+    RAISERROR('N√£o √© permitido excluir a matr√≠cula de um aluno em uma disciplina.', 16, 1);
 END
 
 ENABLE TRIGGER ProibirExclusaoMatricula ON MatriculaAlunoDisciplina
@@ -435,7 +435,7 @@ ON ChamadaLista INSTEAD OF DELETE
 AS
 BEGIN
 	ROLLBACK TRANSACTION
-    RAISERROR('N„o È permitido excluir uma chamada j· realizada.', 16, 1);
+    RAISERROR('N√£o √© permitido excluir uma chamada j√° realizada.', 16, 1);
 END
 
 ENABLE TRIGGER ProibirExclusaoChamada ON ChamadaLista
@@ -454,5 +454,3 @@ SELECT * FROM CursoDisciplina
 SELECT * FROM MatriculaDisciplina
 SELECT * FROM Matricula
 SELECT * FROM Chamada
-
-insert into 
